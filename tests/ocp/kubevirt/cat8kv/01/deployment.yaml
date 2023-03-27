@@ -1,0 +1,29 @@
+kind: VirtualMachineDeployment
+deployment:
+  vm: vm.yaml
+  day0:
+    filename: iosxe_config.txt
+    source: iosxe_config.txt
+    destination: c8000v_config.iso
+    dv: day0.yaml
+  service:
+    ssh: svc.yaml
+ssh:
+  enabled: true
+  type: cisco
+  username: admin
+  password: Cisco_123
+ready:
+  enabled: true
+  type: ssh
+  timeout: 600
+report:
+  enabled: true
+  ssh:
+    version: show version
+    interface: show interface
+    ip_interface: show ip interface
+    ip_interface_brief: show ip interface brief
+    route: show ip route
+    arp: show arp
+    configuration: show running-config
