@@ -9,4 +9,4 @@
 
 ### Cisco Catalyst 8000V Edge Software
 
-- [basic](./doc/ocp-kubevirt-cat9kv-basic/README.md)
+- [basic](./doc/ocp-kubevirt-cat8kv-basic/README.md)
